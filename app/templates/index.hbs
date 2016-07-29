@@ -1,0 +1,17 @@
+<center>
+      <div>
+        <h2 class="text-normal glyphicon glyphicon-search"> Search more than 38M repositories</h2>
+        <div class="search-box">
+          <div class="input-group">
+            {{input type="text" name=search value=searchKey placeholder="Search GitHub"}}
+            <span class="input-group-btn">
+              {{#link-to "search" (query-params q=searchKey)}}
+              <button class="btn btn-default" type="button" value=name>Search</button>
+              {{/link-to}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </center>
+
+{{outlet}}

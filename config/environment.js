@@ -10,7 +10,13 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      }
+      },
+
+    EXTEND_PROTOTYPES: {
+      Date: false,
+    }
+
+
     },
 
     APP: {
@@ -18,6 +24,7 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

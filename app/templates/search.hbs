@@ -1,0 +1,8 @@
+{{outlet}}
+
+<ul>
+{{#each model.items as |repos|}}
+    <li>{{repos.full_name}}</li>
+    {{repos.description}}
+{{/each}}
+</ul>
