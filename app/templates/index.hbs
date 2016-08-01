@@ -4,11 +4,11 @@
         <div class="search-box">
           <div class="input-group">
             {{input type="text" name=search value=searchKey placeholder="Search GitHub"}}
-            <span class="input-group-btn">
-              {{#link-to "search" (query-params q=searchKey)}}
+
+              {{#link-to "search" (query-params q=searchKey s="")}}
               <button class="btn btn-default" type="button" value=name>Search</button>
               {{/link-to}}
-            </span>
+
           </div>
         </div>
       </div>

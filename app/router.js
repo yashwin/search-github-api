@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('index',{path : '/'});
   this.route('search',{path: '/search/'});
+  this.route('sort');
 });
 
 export default Router;
