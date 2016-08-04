@@ -1,20 +1,25 @@
-{{outlet}}
-
-
-
-{{#bs-dropdown}}
-  {{#bs-dropdown-button}}Sort: Best match <span class="caret"></span>{{/bs-dropdown-button}}
-  {{#bs-dropdown-menu}}
-    <li value="Most Stars">{{#link-to "search" (query-params s="&sort=stars&order=desc")}}Most Stars{{/link-to}}</li>
-    <li>{{#link-to "search" (query-params s="&sort=stars&order=asc")}}Least Stars{{/link-to}}</li>
-    <li>{{#link-to "search" (query-params s="&sort=forks&order=desc")}}Most Forks{{/link-to}}</li>
-    <li>{{#link-to "search" (query-params s="&sort=forks&order=asc")}}Least Forks{{/link-to}}</li>
-  {{/bs-dropdown-menu}}
-{{/bs-dropdown}}
-
-<ul>
-{{#each model.items as |repos|}}
-    <li>{{repos.full_name}}</li>
-    {{repos.description}}
+<div>
+  <h1 class="col-md-6 col-md-offset-3 header"> LIST OF BOOTSTRAP REPOS </h1>
+</div>
+    <div class="sorter">
+    <label for="sort">Sort:</label>
+    <select class="sort" id="sort" name="sort">
+      <option>Best Match</option>
+      <option>Most Stars</option>
+      <option>Fewest Stars</option>
+      <option>Most Forks</option>
+      <option>Least Forks</option>
+    </select>
+  </div>
+  {{#each model as |repo|}}
+  <div class="col-md-6 col-md-offset-3 repositories">
+  <h3>{{repo.full_name}}</h3>
+    <h5 class="description">{{repo.description}}</h5>
+    <ul class="properties">
+    <h5 title="Language" class="col-md-3 glyphicon glyphicon-comment attribute"> {{repo.language}}</h5>
+    <h5 title="Forks" class="col-md-3 glyphicon glyphicon-link attribute"> {{repo.forks_count}}</h5>
+    <h5 title="Watchers" class="col-md-3 glyphicon glyphicon-time attribute"> {{repo.watchers_count}}</h5>
+    <h5 title="Stargazers" class="col-md-3 glyphicon glyphicon-star attribute"> {{repo.stargazers_count}}</h5>
+    </ul>
+  </div>
 {{/each}}
-</ul>
