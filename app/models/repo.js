@@ -1,5 +1,13 @@
 import DS from 'ember-data';
 
+function kCount(count){
+  if(parseInt(count,10) > 999) {
+    return `${Math.round(count * 0.01) * 0.1}K`;
+  } else {
+    return `${count}`;
+  }
+}
+
 export default DS.Model.extend({
   name: DS.attr(),
   full_name: DS.attr(),
@@ -12,33 +20,14 @@ export default DS.Model.extend({
   forks_count: DS.attr(),
   language: DS.attr(),
 
-  stars_k_count: Ember.computed('stargazers_count',function(){
-      let num = this.get('stargazers_count');
-      if(parseInt(num,10) > 1000) {
-        return `${Math.round(num * 0.01) * 0.1}K`;
-      } else {
-        return `${num}`;
-      }
-          return `${Math.round(num * 0.01) * 0.1}K`;
-      }),
-  watchers_k_count: Ember.computed('watchers_count',function(){
-          let num = this.get('watchers_count');
-          if(parseInt(num,10) > 1000) {
-            return `${Math.round(num * 0.01) * 0.1}K`;
-          } else {
-            return `${num}`;
-          }
-              return `${Math.round(num * 0.01) * 0.1}K`;
-          }),
-
-  forks_k_count: Ember.computed('forks_count',function(){
-              let num = this.get('forks_count');
-              if(parseInt(num,10) > 1000) {
-                return `${Math.round(num * 0.01) * 0.1}K`;
-              } else {
-                return `${num}`;
-              }
-                  return `${Math.round(num * 0.01) * 0.1}K`;
-              })
+  star_count: Ember.computed('stargazers_count', function() {
+    return kCount(this.get('stargazers_count'));
+  }),
+  watch_count: Ember.computed('watchers_count', function() {
+    return kCount(this.get('watchers_count'));
+  }),
+  fork_count: Ember.computed('forks_count', function() {
+    return kCount(this.get('forks_count'));
+  }),
 
 });
