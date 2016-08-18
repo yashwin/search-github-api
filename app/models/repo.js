@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 function kCount(count){
   if(parseInt(count,10) > 999) {
-    return `${Math.round(count * 0.01) * 0.1}K`;
+    return `${Math.round((count * 0.01) * 0.1).toFixed(0)}K`;
   } else {
     return `${count}`;
   }
