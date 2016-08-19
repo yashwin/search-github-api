@@ -1,7 +1,6 @@
 export default function() {
   this.get('/repos', function() {
     return {
-
   "repos": [
     {
       "id": 2126244,
@@ -2674,6 +2673,6 @@ export default function() {
       "score": 31.178026
     }
   ]
-}
+};
   });
 }
