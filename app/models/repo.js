@@ -10,24 +10,24 @@ function kCount(count){
 
 export default DS.Model.extend({
   name: DS.attr(),
-  full_name: DS.attr(),
+  fullName: DS.attr(),
   description: DS.attr(),
-  created_at: DS.attr(),
-  updated_at: DS.attr(),
-  pushed_at: DS.attr(),
-  stargazers_count: DS.attr(),
-  watchers_count: DS.attr(),
-  forks_count: DS.attr(),
+  createdAt: DS.attr(),
+  updatedAt: DS.attr(),
+  pushedAt: DS.attr(),
+  stargazersCount: DS.attr(),
+  watchersCount: DS.attr(),
+  forksCount: DS.attr(),
   language: DS.attr(),
 
-  star_count: Ember.computed('stargazers_count', function() {
-    return kCount(this.get('stargazers_count'));
+  starCount: Ember.computed('stargazersCount', function() {
+    return kCount(this.get('stargazersCount'));
   }),
-  watch_count: Ember.computed('watchers_count', function() {
-    return kCount(this.get('watchers_count'));
+  watchCount: Ember.computed('watchersCount', function() {
+    return kCount(this.get('watchersCount'));
   }),
-  fork_count: Ember.computed('forks_count', function() {
-    return kCount(this.get('forks_count'));
+  forkCount: Ember.computed('forksCount', function() {
+    return kCount(this.get('forksCount'));
   }),
 
 });
