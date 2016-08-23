@@ -4,24 +4,24 @@
   <label for="sort">Sort:</label>
     <select onchange={{action "sortBy" value="target.value"}}>
       <option value=>BEST MATCH</option>
-      <option value=forksCount:desc>MOST FORKS</option>
-      <option value=forksCount:asc>FEW FORKS</option>
-      <option value=watchersCount:desc>MOST WATCHERS</option>
-      <option value=watchersCount:asc>FEW WATCHERS</option>
-      <option value=stargazersCount:desc>MOST STARS</option>
-      <option value=stargazersCount:asc>FEW STARS</option>
+      <option value=forks_count:desc>MOST FORKS</option>
+      <option value=forks_count:asc>FEW FORKS</option>
+      <option value=watchers_count:desc>MOST WATCHERS</option>
+      <option value=watchers_count:asc>FEW WATCHERS</option>
+      <option value=stargazers_count:desc>MOST STARS</option>
+      <option value=stargazers_count:asc>FEW STARS</option>
     </select>
 </div>
 
 {{#each sortedRepos as |repo|}}
   <div class="col-md-7 col-md-offset-3 repositories">
-    <h3>{{repo.fullName}}</h3>
+    <h3>{{repo.full_name}}</h3>
     <h5 class="description">{{repo.description}}</h5>
     <ul class="properties">
       <h5 title="Language" class="col-md-3 glyphicon glyphicon-comment attribute"> {{repo.language}}</h5>
-      <h5 title="Forks" class="col-md-3 glyphicon glyphicon-link attribute"> {{repo.forkCount}}</h5>
-      <h5 title="Watchers" class="col-md-3 glyphicon glyphicon-time attribute"> {{repo.watchCount}}</h5>
-      <h5 title="Stargazers" class="col-md-3 glyphicon glyphicon-star attribute"> {{repo.starCount  }}</h5>
+      <h5 title="Forks" class="col-md-3 glyphicon glyphicon-link attribute"> {{repo.forks_count}}</h5>
+      <h5 title="Watchers" class="col-md-3 glyphicon glyphicon-time attribute"> {{repo.watchers_count}}</h5>
+      <h5 title="Stargazers" class="col-md-3 glyphicon glyphicon-star attribute"> {{repo.stargazers_count}}</h5>
     </ul>
   </div>
 {{/each}}

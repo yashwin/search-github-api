@@ -5,19 +5,25 @@
 .description{
   color: #666;
 }
-
 .properties{
   color: #333;
 }
-
 .attribute:hover{
   color: #4078c0;
 }
-
 .repositories{
   color: #4078c0;
 }
-
 .sorter{
   margin-top: 50px;
+}
+.repo-name{
+  text-transform: uppercase;
+  color : #4078c0;
+}
+.search-button{
+  width: 50%;  
+}
+.search-box{
+  margin-top: 30px;
 }

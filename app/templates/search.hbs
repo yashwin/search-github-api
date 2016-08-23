@@ -1,5 +1,8 @@
+{{outlet}}
+
 <div>
-  <h1 class="col-md-7 col-md-offset-3 header"> LIST OF BOOTSTRAP REPOS </h1>
+  <h1 class="col-md-7 col-md-offset-3 header"> LIST OF <span class="repo-name">{{q}}</span> REPOS </h1>
 </div>
 
-{{sort-results results=model}}
+
+{{sort-results results=model.items}}
