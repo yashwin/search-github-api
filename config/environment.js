@@ -19,6 +19,7 @@ module.exports = function(environment) {
 
     },
 
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -38,7 +39,7 @@ module.exports = function(environment) {
     // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
-
+    
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
