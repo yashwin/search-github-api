@@ -1,17 +1,6 @@
 {{yield}}
 
-<div class="sorter">
-  <label for="sort">Sort:</label>
-    <select onchange={{action "sortBy" value="target.value"}}>
-      <option value=>BEST MATCH</option>
-      <option value=forks_count:desc>MOST FORKS</option>
-      <option value=forks_count:asc>FEW FORKS</option>
-      <option value=watchers_count:desc>MOST WATCHERS</option>
-      <option value=watchers_count:asc>FEW WATCHERS</option>
-      <option value=stargazers_count:desc>MOST STARS</option>
-      <option value=stargazers_count:asc>FEW STARS</option>
-    </select>
-</div>
+
 
 {{#each sortedRepos as |repo|}}
   <div class="col-md-7 col-md-offset-3 repositories">

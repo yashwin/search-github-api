@@ -22,8 +22,17 @@
   color : #4078c0;
 }
 .search-button{
-  width: 50%;  
+  width: 50%;
 }
 .search-box{
   margin-top: 30px;
+}
+.pagation-items{
+  position: relative;
+  top:100px;
+  margin-left: 600px;
+}
+.disabled-button{
+  opacity: 0.65;
+  cursor: not-allowed;
 }
