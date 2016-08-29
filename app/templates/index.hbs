@@ -1,15 +1,13 @@
-<center>
-       <div>
-         <h2 class="text-normal glyphicon glyphicon-search"> Search more than 38M repositories</h2>
-         <div class="search-box">
-           <div class="input-group">
-             {{input type="text" name=search value=searchKey placeholder="Search GitHub"}}
-             <span class="input-group-btn search-button">
-               {{#link-to "search" (query-params q=searchKey)}}
-               <button class="btn btn-default" type="button" value=name>Search</button>
-               {{/link-to}}
-             </span>
-           </div>
-         </div>
-       </div>
-     </center>
+<div class="column is-half is-offset-5">
+<h2 class="fa fa-search fa-2x"> Search more than 38M repositories</h2>
+</div>
+<div class="column is-half is-offset-5">
+     <p class="control has-addons">
+      {{input type="text" name=search value=searchKey placeholder="Search GitHub"}}
+        {{#link-to "search" (query-params q=searchKey)}}
+       <a class="button is-success">
+         Search
+       </a>
+       {{/link-to}}
+     </p>
+</div>

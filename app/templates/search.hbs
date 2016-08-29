@@ -1,24 +1,46 @@
 {{outlet}}
 
-
-
-<div>
-  <h1 class="col-md-9 header text-center"> LIST OF <span class="repo-name">{{q}}</span> REPOS </h1>
+<div class="column is-half is-offset-one-quarter">
+  <h1 class="repo-heading"> LIST OF <span class="repo-name">{{q}}</span> REPOS </h1>
 </div>
-
-<!-- {{sort-results results=model.items}} -->
 
 {{#list-pagination paginateBy=paginateBy items=model.items as |teams|}}
   {{#repo-list teams=teams as |repo|}}
-   <div class="col-md-9 col-md-offset-3 repositories">
-     <h3>{{repo.full_name}}</h3>
-     <h5 class="description">{{repo.description}}</h5>
-     <ul class="properties">
-       <h5 title="Language" class="col-md-3 glyphicon glyphicon-comment attribute"> {{repo.language}}</h5>
-       <h5 title="Forks" class="col-md-3 glyphicon glyphicon-link attribute"> {{repo.forks_count}}</h5>
-       <h5 title="Watchers" class="col-md-3 glyphicon glyphicon-time attribute"> {{repo.watchers_count}}</h5>
-       <h5 title="Stargazers" class="col-md-3 glyphicon glyphicon-star attribute"> {{repo.stargazers_count}}</h5>
-     </ul>
-   </div>
-  {{/repo-list}}
+  <div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <img src="{{repo.owner.avatar_url}}" alt="Image">
+      </figure>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>{{repo.full_name}}</strong>
+          <br>
+          {{repo.description}}
+          </p>
+      </div>
+      <nav class="level">
+        <div class="level-left">
+          <div class="columns repo-items">
+            <li class="level-item"><i class="fa fa-language repo-icons"></i>
+             {{repo.language}}
+           </li>
+            <li class="level-item"><i class="fa fa-code-fork repo-icons"></i>
+              {{repo.forks_count}}
+            </li>
+            <li class="level-item"><i class="fa fa-clock-o repo-icons"></i>
+            {{repo.watchers_count}}
+          </li>
+            <li class="level-item"><i class="fa fa-star repo-icons"></i>
+            {{repo.stargazers_count}}
+          </li>
+        </div>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+{{/repo-list}}
 {{/list-pagination}}
