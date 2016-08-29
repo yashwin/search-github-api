@@ -1,38 +1,32 @@
 
-.header{
-  color: #333;
-}
-.description{
-  color: #666;
-}
-.properties{
-  color: #333;
-}
-.attribute:hover{
-  color: #4078c0;
-}
-.repositories{
-  color: #4078c0;
-}
-.sorter{
-  margin-top: 50px;
-}
 .repo-name{
   text-transform: uppercase;
   color : #4078c0;
 }
-.search-button{
-  width: 50%;
-}
-.search-box{
-  margin-top: 30px;
+li{
+  list-style-type: none;
 }
 .pagation-items{
   position: relative;
   top:100px;
-  margin-left: 600px;
+  margin-left: 500px;
 }
 .disabled-button{
   opacity: 0.65;
   cursor: not-allowed;
+}
+.repo-icons{
+  font-size: 16px!important;
+  vertical-align: baseline!important;
+  margin-left: 20px;
+  margin-top: 8px;
+  cursor: pointer;
+
+}
+.repo-items{
+ cursor: pointer;
+}
+.repo-heading{
+  font-size: 30px;
+  text-align: center;
 }
