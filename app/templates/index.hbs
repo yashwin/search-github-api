@@ -1,13 +1,16 @@
 <div class="column is-half is-offset-5">
-<h2 class="fa fa-search fa-2x"> Search more than 38M repositories</h2>
+<h2 class="fa fa-search fa-2x"> Search more than 38M <i class="fa fa-github"></i> repositories</h2>
 </div>
 <div class="column is-half is-offset-5">
      <p class="control has-addons">
       {{input type="text" name=search value=searchKey placeholder="Search GitHub"}}
         {{#link-to "search" (query-params q=searchKey)}}
-       <a class="button is-success">
-         Search
-       </a>
+        <a class="button">
+    <span class="icon">
+      <i class="fa fa-github"></i>
+    </span>
+    <span>Search</span>
+  </a>
        {{/link-to}}
      </p>
 </div>
