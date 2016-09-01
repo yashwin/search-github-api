@@ -8,12 +8,19 @@
 =box-shadow($x...)
   box-shadow: $x
 
+.cursor-pointer
+  cursor: $pointer
+  color : #ffff00
+  letter-spacing: 1px
+  background-color: #9370DB
+
+
 .repo-name
   text-transform: uppercase
   color: $primary-color
 
 .repo-items
-  cursor: $pointer
+  @extend .cursor-pointer
 
   pre
   li
@@ -21,8 +28,8 @@
     margin-left: 0px
     padding-right: 30px
   i
+    @extend .cursor-pointer
     font-size: 16px!important
-    cursor: $pointer
     margin-left:80px!important
     position: relative
     top: 17px
