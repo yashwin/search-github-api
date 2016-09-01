@@ -5,8 +5,17 @@ $pointer : pointer
   text-transform: uppercase
   color: $primary-color
 
-li
-  list-style-type: none
+.repo-items
+  cursor: $pointer
+
+  pre
+  li
+    list-style-type: none
+    margin-left: 0px
+    padding-right: 30px
+  i
+    font-size: 16px!important
+    cursor: $pointer
 
 .pagination-items
   position: relative
@@ -17,16 +26,11 @@ li
   opacity: 0.65
   cursor: not-allowed
 
-.repo-icons
-  font-size: 16px!important
-  vertical-align: baseline!important
-  margin-left: 20px!important
-  margin-top: 8px!important
-  cursor: $pointer
-
-.repo-items
-  cursor: $pointer
-
 .repo-heading
   font-size: 30px
   text-align: center
+
+.repo-icons
+  margin-left:80px!important
+  position: relative
+  top: 17px
