@@ -1,5 +1,13 @@
 @import variables
 
+=border-radius($radius)
+  -webkit-border-radius : $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+=box-shadow($x...)
+  box-shadow: $x
+
 .repo-name
   text-transform: uppercase
   color: $primary-color
@@ -31,3 +39,7 @@
 .repo-heading
   font-size: 30px
   text-align: center
+
+.repo-box
+  +border-radius(30px!important)
+  +box-shadow(10px 10px 5px #888888!important)
