@@ -31,11 +31,12 @@
     @extend .cursor-pointer
     font-size: 16px!important
     margin-left:80px!important
-    position: relative
+    $position: relative !global
+    position: $position
     top: 15px + 2px
 
 .pagination-items
-  position: relative
+  position: $position
   top : 100px
   margin-left: 900px/3px + 200px
 
