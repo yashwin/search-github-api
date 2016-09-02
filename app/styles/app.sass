@@ -1,4 +1,5 @@
 @import variables
+@import "bourbon/bourbon"
 
 =border-radius($radius)
   -webkit-border-radius : $radius
@@ -51,3 +52,7 @@
 .repo-box
   +border-radius(30px!important)
   +box-shadow(10px 10px 5px #888888!important)
+
+input
+  @include placeholder
+    color: red
