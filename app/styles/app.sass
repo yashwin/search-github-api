@@ -1,6 +1,6 @@
 @import variables
 @import "bourbon/bourbon"
-
+@import "bulma"
 =border-radius($radius)
   -webkit-border-radius : $radius
   -moz-border-radius: $radius
@@ -13,8 +13,9 @@
   cursor: $pointer
   color : #ffff00
   letter-spacing: 1px
-  background-color: #9370DB
 
+.search-button
+  @include linear-gradient(#1e5799, #2989d8)
 
 .repo-name
   text-transform: uppercase
@@ -22,6 +23,8 @@
 
 .repo-items
   @extend .cursor-pointer
+  @include background(linear-gradient(red, purple) left repeat)
+
 
   pre
   li
@@ -52,6 +55,7 @@
 .repo-box
   +border-radius(30px!important)
   +box-shadow(10px 10px 5px #888888!important)
+
 
 input
   @include placeholder

@@ -8,6 +8,8 @@
     "bootstrap": "~3.3.5",
     "pretender": "~1.1.0",
     "Faker": "~3.1.0",
-    "bourbon": "4.2.6"
+    "bourbon": "4.2.6",
+    "bulma": "^0.0.26",
+    "font-awesome": "~4.5.0"
   }
 }
