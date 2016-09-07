@@ -17,7 +17,7 @@
   letter-spacing: 1px
 
 .search-button
-  @include linear-gradient(#1e5799, #2989d8)
+  @include button(shiny, #ff0000)
 
 
 .go-to
@@ -64,6 +64,9 @@
 
 
 input
+  @include border-color(red)
+  @include border-radius(5px)
+  @include border-style(dashed)
   @include placeholder
     color: red
 
