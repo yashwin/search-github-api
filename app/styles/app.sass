@@ -1,6 +1,8 @@
 @import variables
 @import "bourbon/bourbon"
 @import "bulma"
+
+
 =border-radius($radius)
   -webkit-border-radius : $radius
   -moz-border-radius: $radius
@@ -16,6 +18,10 @@
 
 .search-button
   @include linear-gradient(#1e5799, #2989d8)
+
+
+.go-to
+  color: blue!important
 
 .repo-name
   text-transform: uppercase
@@ -60,3 +66,7 @@
 input
   @include placeholder
     color: red
+
+.bourbon-flex
+  width: flex-grid(4)
+  margin-left: flex-gutter()
