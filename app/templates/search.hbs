@@ -16,7 +16,7 @@
     <div class="media-content">
       <div class="content">
         <p>
-          <strong>{{repo.full_name}}</strong>
+          <a href="{{repo.html_url}}"><strong class="go-to">{{repo.full_name}}</strong></a>
           <br>
           {{repo.description}}
           </p>
@@ -24,16 +24,16 @@
       <nav class="level">
         <div class="level-left">
           <pre class="columns repo-items">
-            <li class="level-item"><i class="fa fa-language repo-icons"></i>
+            <li class="level-item bourbon-flex"><i class="fa fa-language repo-icons"></i>
              {{repo.language}}
            </li>
-            <li class="level-item"><i class="fa fa-code-fork repo-icons"></i>
+            <li class="level-item bourbon-flex"><i class="fa fa-code-fork repo-icons"></i>
              {{k-count repo.forks_count}}
             </li>
-            <li class="level-item"><i class="fa fa-clock-o repo-icons"></i>
+            <li class="level-item bourbon-flex"><i class="fa fa-clock-o repo-icons"></i>
             {{k-count repo.watchers_count}}
           </li>
-            <li class="level-item"><i class="fa fa-star repo-icons"></i>
+            <li class="level-item bourbon-flex"><i class="fa fa-star repo-icons"></i>
             {{k-count repo.stargazers_count}}
           </li>
         </pre>

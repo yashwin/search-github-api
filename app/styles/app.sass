@@ -1,4 +1,7 @@
 @import variables
+@import "bourbon/bourbon"
+@import "bulma"
+
 
 =border-radius($radius)
   -webkit-border-radius : $radius
@@ -12,8 +15,13 @@
   cursor: $pointer
   color : #ffff00
   letter-spacing: 1px
-  background-color: #9370DB
 
+.search-button
+  @include button(shiny, #ff0000)
+
+
+.go-to
+  color: blue!important
 
 .repo-name
   text-transform: uppercase
@@ -21,6 +29,8 @@
 
 .repo-items
   @extend .cursor-pointer
+  @include background(linear-gradient(red, purple) left repeat)
+
 
   pre
   li
@@ -31,11 +41,12 @@
     @extend .cursor-pointer
     font-size: 16px!important
     margin-left:80px!important
-    position: relative
+    $position: relative !global
+    position: $position
     top: 15px + 2px
 
 .pagination-items
-  position: relative
+  position: $position
   top : 100px
   margin-left: 900px/3px + 200px
 
@@ -50,3 +61,15 @@
 .repo-box
   +border-radius(30px!important)
   +box-shadow(10px 10px 5px #888888!important)
+
+
+input
+  @include border-color(red)
+  @include border-radius(5px)
+  @include border-style(dashed)
+  @include placeholder
+    color: red
+
+.bourbon-flex
+  width: flex-grid(4)
+  margin-left: flex-gutter()
