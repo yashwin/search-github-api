@@ -1,0 +1,33 @@
+.column
+  h1.repo-heading
+    | LIST OF&nbsp;
+    span.repo-name
+      = q
+    | &nbsp;REPOS
+
+
+  list-pagination paginateBy=paginateBy items=model.items as |teams|
+    repo-list teams=teams as |repo|
+      .repo-box
+        article.media
+          .media-left
+            figure.image.is-64x64
+              img src="#{repo.owner.avatar_url}" alt="Image"
+              .media-content
+          .content
+            p
+              a href="#{repo.html_url}"
+                strong.go-to {{repo.full_name}}
+            p #{repo.description}
+
+            nav.level
+              .level-left
+                pre.columns.repo-items
+                  li.level-item.bourbon-flex
+                  i.fa.fa-language.repo-icons #{repo.language}
+                  li.level-item.bourbon-flex
+                     i.fa.fa-code-fork.repo-icons #{k-count repo.forks_count}
+                  li.level-item.bourbon-flex
+                     i.fa.fa-clock-o.repo-icons #{k-count repo.watchers_count}
+                  li.level-item.bourbon-flex
+                    i.fa.fa-star.repo-icons  #{k-count repo.stargazers_count}
