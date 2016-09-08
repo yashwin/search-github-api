@@ -1,0 +1,2 @@
+each teams as |team|
+  = yield team
