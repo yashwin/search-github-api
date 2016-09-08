@@ -1,0 +1,14 @@
+=yield paginatedItems
+.pagination-items.col-md-12
+  if showPrevious
+    button click="previousClicked" #{previousText}
+  else
+    button.disabled-button #{previousText}
+
+  each pageNumbers as |pageNumber|
+    button click="'pageClicked' pageNumber"  #{pageNumber}
+
+  if showNext
+    button click="nextClicked"  #{nextText}
+  else
+    button.disabled-button #{nextText}

@@ -1,0 +1,13 @@
+.column.is-half.is-offset-5
+  h2.fa.fa-search.fa-2x Search more than 38M
+  i.fa.fa-github repositories
+.column.is-half.is-offset-5
+  p.control.has-addons
+  .column.is-half
+    p.control.has-addons
+      = input type="text" name=search value=searchKey placeholder="Search GitHub"
+      link-to "search" (query-params q=searchKey)
+       a.button.search-button
+        span.icon
+        i.fa.fa-github
+        span Search
