@@ -1,6 +1,6 @@
 # Ghsearch
 
-Search for any GitHub repositories using GitHub API(EmberJS: Coffeescript, EmblemJS, Sass, Bourbon) with Pagination and Sorting
+Search for any GitHub repository using GitHub API(EmberJS: Coffeescript, EmblemJS, Sass, Bourbon) with Pagination and Sorting
 
 ## Prerequisites
 
